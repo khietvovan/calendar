@@ -26,7 +26,7 @@ const CalendarPart = createReactClass({
     enableNext: PropTypes.any,
     enablePrev: PropTypes.any,
     enablePrevNextMonthBtns: PropTypes.bool,
-    enablePrevNextYearBtns: PropTypes.bool
+    enablePrevNextYearBtns: PropTypes.bool,
   },
   render() {
     const props = this.props;

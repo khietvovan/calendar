@@ -187,7 +187,7 @@ ReactDOM.render(
         timePicker={timePickerElement}
         disabledTime={disabledTime}
         enablePrevNextMonthBtns={false}
-        enablePrevNextYearBtns={true}
+        enablePrevNextYearBtns
       />
     </div>
     <br />

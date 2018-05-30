@@ -98,7 +98,7 @@ const RangeCalendar = createReactClass({
     disabledDate: PropTypes.func,
     disabledTime: PropTypes.func,
     enablePrevNextMonthBtns: PropTypes.bool,
-    enablePrevNextYearBtns: PropTypes.bool
+    enablePrevNextYearBtns: PropTypes.bool,
   },
 
   mixins: [CommonMixin],
@@ -580,7 +580,6 @@ const RangeCalendar = createReactClass({
               disabledMonth={this.disabledEndMonth}
               enablePrev={!isClosestMonths || this.isMonthYearPanelShow(mode[0])}
               enableNext
-              
             />
           </div>
           <div className={cls}>

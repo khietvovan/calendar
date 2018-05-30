@@ -182,7 +182,7 @@ const CalendarHeader = createReactClass({
         />
       );
     }
-    console.log('enablePrevNextMonthBtns', enablePrevNextMonthBtns)
+
     return (<div className={`${prefixCls}-header`}>
       <div style={{ position: 'relative' }}>
         {showIf((enablePrev && !showTimePicker) && enablePrevNextYearBtns,
