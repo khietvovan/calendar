@@ -141,6 +141,8 @@ const CalendarHeader = createReactClass({
       showTimePicker,
       enableNext,
       enablePrev,
+      enablePrevNextMonthBtns,
+      enablePrevNextYearBtns,
       disabledMonth,
     } = props;
 
@@ -180,17 +182,17 @@ const CalendarHeader = createReactClass({
         />
       );
     }
-
+    console.log('enablePrevNextMonthBtns', enablePrevNextMonthBtns)
     return (<div className={`${prefixCls}-header`}>
       <div style={{ position: 'relative' }}>
-        {showIf(enablePrev && !showTimePicker,
+        {showIf((enablePrev && !showTimePicker) && enablePrevNextYearBtns,
           <a
             className={`${prefixCls}-prev-year-btn`}
             role="button"
             onClick={this.previousYear}
             title={locale.previousYear}
           />)}
-        {showIf(enablePrev && !showTimePicker,
+        {showIf((enablePrev && !showTimePicker) && enablePrevNextMonthBtns,
           <a
             className={`${prefixCls}-prev-month-btn`}
             role="button"
@@ -198,13 +200,13 @@ const CalendarHeader = createReactClass({
             title={locale.previousMonth}
           />)}
         {this.monthYearElement(showTimePicker)}
-        {showIf(enableNext && !showTimePicker,
+        {showIf((enableNext && !showTimePicker) && enablePrevNextMonthBtns,
           <a
             className={`${prefixCls}-next-month-btn`}
             onClick={this.nextMonth}
             title={locale.nextMonth}
           />)}
-        {showIf(enableNext && !showTimePicker,
+        {showIf((enableNext && !showTimePicker) && enablePrevNextYearBtns,
           <a
             className={`${prefixCls}-next-year-btn`}
             onClick={this.nextYear}

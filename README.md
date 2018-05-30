@@ -32,6 +32,16 @@ React Calendar
 
 <img src="https://img.alicdn.com/tps/TB1nAGDKVXXXXXvapXXXXXXXXXX-1206-730.png" width="500"/>
 
+## Forked version update:
+* Allow disable button next Month/Year on Range Calendar
+  *  Example:
+        ```js
+        <RangeCalendar
+          enablePrevNextMonthBtns={false}
+          enablePrevNextYearBtns={true}
+        />
+        ```
+
 ## Feature
 
 * support ie9,ie9+,chrome,firefox,safari

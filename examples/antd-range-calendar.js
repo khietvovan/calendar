@@ -137,11 +137,11 @@ class Demo extends React.Component {
         hoverValue={state.hoverValue}
         onHoverChange={this.onHoverChange}
         showWeekNumber={false}
-        dateInputPlaceholder={['start', 'end']}
         defaultValue={[now, now.clone().add(1, 'months')]}
-        locale={cn ? zhCN : enUS}
+        showDateInput={false}
+        // locale={cn ? zhCN : enUS}
         disabledTime={disabledTime}
-        timePicker={timePickerElement}
+        // timePicker={timePickerElement}
       />
     );
     return (
@@ -186,6 +186,8 @@ ReactDOM.render(
         disabledDate={disabledDate}
         timePicker={timePickerElement}
         disabledTime={disabledTime}
+        enablePrevNextMonthBtns={false}
+        enablePrevNextYearBtns={true}
       />
     </div>
     <br />

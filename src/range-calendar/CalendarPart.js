@@ -25,6 +25,8 @@ const CalendarPart = createReactClass({
     timePickerDisabledTime: PropTypes.object,
     enableNext: PropTypes.any,
     enablePrev: PropTypes.any,
+    enablePrevNextMonthBtns: PropTypes.bool,
+    enablePrevNextYearBtns: PropTypes.bool
   },
   render() {
     const props = this.props;
@@ -91,6 +93,8 @@ const CalendarPart = createReactClass({
             onValueChange={props.onValueChange}
             onPanelChange={props.onPanelChange}
             disabledMonth={props.disabledMonth}
+            enablePrevNextMonthBtns={props.enablePrevNextMonthBtns}
+            enablePrevNextYearBtns={props.enablePrevNextYearBtns}
           />
           {showTimePicker ? <div className={`${prefixCls}-time-picker`}>
             <div className={`${prefixCls}-time-picker-panel`}>
